@@ -23,4 +23,11 @@ public class UniversityHelper(AppManager manager) : EntityHelper<University>(man
 
         return this;
     }
+
+    public override string GetCreatedEntityName(string entityName)
+    {
+        var option = Driver.FindElement(By.XPath($"//select[@id='ddlMyUniversity']/option[text()='{entityName}']"));
+        
+        return option.Text;
+    }
 }

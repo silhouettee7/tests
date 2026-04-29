@@ -26,4 +26,10 @@ public class SubjectHelper(AppManager manager) : EntityHelper<Subject>(manager)
 
         return this;
     }
+
+    public override string GetCreatedEntityName(string entityName)
+    {
+        var element = Driver.FindElement(By.XPath($"//span[text()='{entityName}']"));
+        return element.Text;
+    }
 }

@@ -8,9 +8,4 @@ public class WindowHelper(AppManager manager) : HelperBase(manager)
     {
         Driver.Navigate().GoToUrl(BaseUrl);
     }
-
-    public void Close()
-    {
-        Driver.Quit();
-    }
 }

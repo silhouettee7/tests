@@ -4,4 +4,5 @@ public abstract class EntityHelper<T>(AppManager manager) : HelperBase(manager)
 {
     public abstract EntityHelper<T> FillNewEntityFields(T entity);
     public abstract EntityHelper<T> CreateNewEntity();
+    public abstract string GetCreatedEntityName(string entityName);
 }

@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using StudFileTests.Helpers;
 
@@ -33,10 +34,13 @@ public class AppManager: IDisposable
         Subject = new SubjectHelper(this);
         University = new UniversityHelper(this);
         Window = new WindowHelper(this);
+        
+        Window.Open();
     }
     
     public void Dispose()
     {
+        Driver.Quit();
         Driver.Dispose();
     }
 
