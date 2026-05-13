@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestData>
+  <Universities>
+    <University>
+      <Name>Московский государственный университет</Name>
+      <Abbreviation>МГУ</Abbreviation>
+      <City>Москва</City>
+    </University>
+    <University>
+      <Name>Санкт-Петербургский государственный университет</Name>
+      <Abbreviation>СПбГУ</Abbreviation>
+      <City>Санкт-Петербург</City>
+    </University>
+    <University>
+      <Name>Новосибирский государственный университет</Name>
+      <Abbreviation>НГУ</Abbreviation>
+      <City>Новосибирск</City>
+    </University>
+    <University>
+      <Name>Казанский федеральный университет</Name>
+      <Abbreviation>КФУ</Abbreviation>
+      <City>Казань</City>
+    </University>
+    <University>
+      <Name>Уральский федеральный университет</Name>
+      <Abbreviation>УрФУ</Abbreviation>
+      <City>Екатеринбург</City>
+    </University>
+    <University>
+      <Name>Томский государственный университет</Name>
+      <Abbreviation>ТГУ</Abbreviation>
+      <City>Томск</City>
+    </University>
+    <University>
+      <Name>Высшее учебное заведение</Name>
+      <Abbreviation>ВУЗ</Abbreviation>
+      <City>Казань</City>
+    </University>
+    <University>
+      <Name>Федеральный исследовательский центр</Name>
+      <Abbreviation>ФИЦ</Abbreviation>
+      <City>Новосибирск</City>
+    </University>
+  </Universities>
+  <Subjects>
+    <Subject>
+      <Name>Конкретная математика</Name>
+      <Abbreviation>КМ</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Линейная алгебра</Name>
+      <Abbreviation>ЛА</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Математический анализ</Name>
+      <Abbreviation>МА</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Дифференциальные уравнения</Name>
+      <Abbreviation>ДУ</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Теория вероятностей</Name>
+      <Abbreviation>ТВ</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Математическая статистика</Name>
+      <Abbreviation>МС</Abbreviation>
+      <ParentSubjectName>Математика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Программирование</Name>
+      <Abbreviation>ПР</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Структуры данных</Name>
+      <Abbreviation>СД</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Алгоритмы</Name>
+      <Abbreviation>АЛ</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Базы данных</Name>
+      <Abbreviation>БД</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Веб-разработка</Name>
+      <Abbreviation>ВР</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Машинное обучение</Name>
+      <Abbreviation>МО</Abbreviation>
+      <ParentSubjectName>Информатика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Классическая механика</Name>
+      <Abbreviation>КМ</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Электромагнетизм</Name>
+      <Abbreviation>ЭМ</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Квантовая механика</Name>
+      <Abbreviation>КВМ</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Термодинамика</Name>
+      <Abbreviation>ТД</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Оптика</Name>
+      <Abbreviation>ОП</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+    <Subject>
+      <Name>Ядерная физика</Name>
+      <Abbreviation>ЯФ</Abbreviation>
+      <ParentSubjectName>Физика</ParentSubjectName>
+    </Subject>
+  </Subjects>
+  <Users>
+    <User>
+      <Login>testuser1</Login>
+      <Password>TestPassword123!</Password>
+    </User>
+    <User>
+      <Login>testuser2</Login>
+      <Password>SecurePass456@</Password>
+    </User>
+    <User>
+      <Login>testuser3</Login>
+      <Password>MyPassword789#</Password>
+    </User>
+    <User>
+      <Login>testuser4</Login>
+      <Password>QuickTest101$</Password>
+    </User>
+    <User>
+      <Login>testuser5</Login>
+      <Password>AdminPass202%</Password>
+    </User>
+    <User>
+      <Login>testuser6</Login>
+      <Password>DevTest303&amp;</Password>
+    </User>
+    <User>
+      <Login>testuser7</Login>
+      <Password>QAPassword404*</Password>
+    </User>
+    <User>
+      <Login>testuser8</Login>
+      <Password>UserTest505(</Password>
+    </User>
+  </Users>
+</TestData>
