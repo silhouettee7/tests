@@ -56,10 +56,7 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         
         Assert.Equal(university.Name, createdUniversity);
     }
-
-    /// <summary>
-    /// Тест создания предмета с использованием данных из XML
-    /// </summary>
+    
     [Fact]
     public void CreateSubjectFromTestData()
     {
@@ -77,12 +74,9 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
 
         Assert.Equal(subject.Name, createdSubject);
     }
-
-    /// <summary>
-    /// Тест создания университета с использованием данных из XML
-    /// </summary>
+    
     [Fact]
-    public void CreateUniversityFromTestData()
+    public async Task CreateUniversityFromTestData()
     {
         var testDataLoader = GetTestDataLoader();
         var university = testDataLoader.LoadRandomUniversity();
@@ -93,20 +87,17 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         AppManager.University
             .FillNewEntityFields(university)
             .CreateNewEntity();
-
+        await Task.Delay(1000);
         var createdUniversity = AppManager.University.GetCreatedEntityName(university.Name);
 
         Assert.Equal(university.Name, createdUniversity);
     }
-
-    /// <summary>
-    /// Параметризованный тест - создание нескольких предметов из XML данных
-    /// </summary>
+    
     [Fact]
     public void CreateMultipleSubjectsFromTestData()
     {
         var testDataLoader = GetTestDataLoader();
-        var subjects = testDataLoader.LoadSubjects().Take(3); // Берем первые 3 предмета
+        var subjects = testDataLoader.LoadSubjects().Take(3);
 
         AppManager.Auth.Login();
         AppManager.Navigation.MoveToMyFilesSection();
@@ -122,15 +113,12 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
             Assert.Equal(subject.Name, createdSubject);
         }
     }
-
-    /// <summary>
-    /// Параметризованный тест - создание нескольких университетов из XML данных
-    /// </summary>
+    
     [Fact]
     public void CreateMultipleUniversitiesFromTestData()
     {
         var testDataLoader = GetTestDataLoader();
-        var universities = testDataLoader.LoadUniversities().Take(3); // Берем первые 3 университета
+        var universities = testDataLoader.LoadUniversities().Take(3); 
 
         AppManager.Auth.Login();
         AppManager.Navigation.MoveToMyFilesSection();
@@ -147,9 +135,6 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         }
     }
 
-    /// <summary>
-    /// Тест загрузки всех данных из XML
-    /// </summary>
     [Fact]
     public void ValidateTestDataLoading()
     {
@@ -163,15 +148,11 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         Assert.NotEmpty(subjects);
         Assert.NotEmpty(users);
 
-        // Проверяем, что данные загружены корректно
         Assert.True(universities.All(u => !string.IsNullOrEmpty(u.Name)));
         Assert.True(subjects.All(s => !string.IsNullOrEmpty(s.Name)));
         Assert.True(users.All(u => !string.IsNullOrEmpty(u.Login)));
     }
-
-    /// <summary>
-    /// Тест поиска конкретного предмета по имени
-    /// </summary>
+    
     [Fact]
     public void FindSubjectByNameFromTestData()
     {
@@ -182,10 +163,7 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         Assert.Equal("Конкретная математика", subject.Name);
         Assert.Equal("КМ", subject.Abbreviation);
     }
-
-    /// <summary>
-    /// Тест поиска конкретного университета по имени
-    /// </summary>
+    
     [Fact]
     public void FindUniversityByNameFromTestData()
     {
@@ -196,10 +174,7 @@ public class StudFileTests(AppManager appManager) : TestBase(appManager)
         Assert.Equal("Московский государственный университет", university.Name);
         Assert.Equal("МГУ", university.Abbreviation);
     }
-
-    /// <summary>
-    /// Тест поиска конкретного пользователя по логину
-    /// </summary>
+    
     [Fact]
     public void FindUserByLoginFromTestData()
     {

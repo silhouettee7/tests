@@ -132,20 +132,4 @@ public class TestDataLoader
     {
         return LoadUsers().FirstOrDefault(u => u.Login == login);
     }
-
-    /// <summary>
-    /// Поиск предметов по категории (ParentSubjectName)
-    /// </summary>
-    public IEnumerable<Subject> LoadSubjectsByCategory(string categoryName)
-    {
-        return LoadSubjects().Where(s => s.ParentSubjectName == categoryName);
-    }
-
-    /// <summary>
-    /// Поиск университетов по городу
-    /// </summary>
-    public IEnumerable<University> LoadUniversitiesByCity(string city)
-    {
-        return LoadUniversities().Where(u => u.City == city);
-    }
 }
