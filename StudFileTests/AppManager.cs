@@ -17,7 +17,7 @@ public class AppManager: IDisposable
 
     public NavigationHelper Navigation { get; }
 
-    public LoginHelper Auth { get; }
+    public AuthHelper Auth { get; }
 
     public SubjectHelper Subject { get; }
 
@@ -29,7 +29,7 @@ public class AppManager: IDisposable
         _configuration = SetConfiguration();
         Driver = new FirefoxDriver();
         
-        Auth = new LoginHelper(this, _configuration);
+        Auth = new AuthHelper(this, _configuration);
         Navigation = new NavigationHelper(this);
         Subject = new SubjectHelper(this);
         University = new UniversityHelper(this);

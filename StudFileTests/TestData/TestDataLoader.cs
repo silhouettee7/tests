@@ -3,10 +3,6 @@ using StudFileTests.Entities;
 
 namespace StudFileTests.TestData;
 
-/// <summary>
-/// Загрузчик тестовых данных из XML файла
-/// Предоставляет методы для получения данных по различным критериям
-/// </summary>
 public class TestDataLoader
 {
     private readonly XDocument _document;
@@ -22,9 +18,6 @@ public class TestDataLoader
         _document = XDocument.Load(xmlFilePath);
     }
 
-    /// <summary>
-    /// Загружает все университеты из XML
-    /// </summary>
     public IEnumerable<University> LoadUniversities()
     {
         var universities = _document.Root?
@@ -39,9 +32,6 @@ public class TestDataLoader
         return universities;
     }
 
-    /// <summary>
-    /// Загружает все предметы из XML
-    /// </summary>
     public IEnumerable<Subject> LoadSubjects()
     {
         var subjects = _document.Root?
@@ -56,9 +46,6 @@ public class TestDataLoader
         return subjects;
     }
 
-    /// <summary>
-    /// Загружает всех пользователей из XML
-    /// </summary>
     public IEnumerable<User> LoadUsers()
     {
         var users = _document.Root?
@@ -73,9 +60,6 @@ public class TestDataLoader
         return users;
     }
 
-    /// <summary>
-    /// Загружает случайный университет
-    /// </summary>
     public University LoadRandomUniversity()
     {
         var universities = LoadUniversities().ToList();
@@ -85,9 +69,6 @@ public class TestDataLoader
         return universities[_random.Next(universities.Count)];
     }
 
-    /// <summary>
-    /// Загружает случайный предмет
-    /// </summary>
     public Subject LoadRandomSubject()
     {
         var subjects = LoadSubjects().ToList();
@@ -97,9 +78,6 @@ public class TestDataLoader
         return subjects[_random.Next(subjects.Count)];
     }
 
-    /// <summary>
-    /// Загружает случайного пользователя
-    /// </summary>
     public User LoadRandomUser()
     {
         var users = LoadUsers().ToList();
@@ -109,25 +87,16 @@ public class TestDataLoader
         return users[_random.Next(users.Count)];
     }
 
-    /// <summary>
-    /// Поиск университета по имени
-    /// </summary>
     public University? LoadUniversityByName(string name)
     {
         return LoadUniversities().FirstOrDefault(u => u.Name == name);
     }
 
-    /// <summary>
-    /// Поиск предмета по имени
-    /// </summary>
     public Subject? LoadSubjectByName(string name)
     {
         return LoadSubjects().FirstOrDefault(s => s.Name == name);
     }
 
-    /// <summary>
-    /// Поиск пользователя по логину
-    /// </summary>
     public User? LoadUserByLogin(string login)
     {
         return LoadUsers().FirstOrDefault(u => u.Login == login);
